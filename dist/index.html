@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Webpack App</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>.container {
+      padding: 0 20%;
+    }
+
+    .demo-wrap {
+      display: flex;
+      height: 200px;
+    }
+
+    .demo-wrap p {
+      margin: 0;
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 13px;
+    }
+
+    .demo-wrap>div:first-child {
+      /* flex: 1; */
+      width: 200px;
+      overflow: auto;
+      border: 1px dashed antiquewhite;
+    }
+
+    .demo-wrap>div:last-child {
+      flex: 2.5;
+      background: #f4f4f4;
+    }
+
+    .demo-wrap.size-wrap .size-small,
+    .demo-wrap.size-wrap .size-default,
+    .demo-wrap.size-wrap .size-large {
+      flex: 2;
+      background: #f4f4f4;
+      position: relative;
+    }
+
+    footer {
+      height: 120px;
+    }</style><link href="css/styles.min.css" rel="stylesheet"></head><body><div class="container"><header><h2 class="title">ContextMenu</h2><p class="desc">自定义右键菜单组件</p></header><section><h3>1 模式</h3><div><p>1.1 默认，菜单大小自适应(default)</p><div class="demo-wrap mode-default-wrap"><div></div></div></div><div><p>1.2 固定菜单大小(fixed)</p><div class="demo-wrap mode-fixed-wrap"><div></div></div></div></section><section><h3>2 大小</h3><div class="demo-wrap size-wrap"><div></div></div></section><footer></footer></div><script src="js/contextmenu.js"></script></body></html>
