@@ -1,0 +1,67 @@
+@import "./theme.scss";
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// 菜单
+.contextmenu,
+.contextmenu-child {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2), 0px 0px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  &.actived {
+    display: block;
+  }
+
+  &.small .contextmenu-item {
+    min-height: 24px;
+    font-size: 10px;
+  }
+  &.default .contextmenu-item {
+    min-height: 32px;
+    font-size: 12px;
+  }
+  &.large .contextmenu-item {
+    min-height: 40px;
+    font-size: 14px;
+  }
+  &.fixed .contextmenu-item {
+    span.contextmenu-item-label {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  // 菜单项
+  .contextmenu-item {
+    position: relative;
+    min-width: 80px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    word-break: break-all;
+    background-color: $backgroud-color;
+    box-sizing: border-box;
+    padding: 4px 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: $backgroud-hover-color;
+    }
+    &:active {
+      background-color: $background-active-color;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid $backgroud-hover-color;
+    }
+    > .contextmenu-item-label {
+      flex: 1;
+    }
+  }
+}
